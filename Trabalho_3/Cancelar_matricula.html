@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script type="text/javascript" src="codigo.js"></script>
+    <title>Document</title>
+
+    </head>
+
+    <body>
+
+        <div class="bs-component">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cancelar matricula</a>
+              </div>
+              <div style="text-align:right;">
+                  <a class="navbar-brand" style="padding: 10px 50px 10px 10px;" href="sla">voltar</a>
+              </div>
+            </nav>
+        </div>
+        <br/>
+        <div style="padding: 10px 10px 10px 10px;">
+        <h1 id="informação">Informe o RA do aluno </h1>
+        <h3 id="info_extr">Ao informar o RA e clicar no botão faremos o cancelamento da sua Matricula</h3>
+        <br/>
+        <form id="formu">
+            <label for="RA">
+                <span style="padding: 10px 10px 10px 0px;">RA:</span>
+            </label>
+            <input id="RA" type="text" maxlength="15" placeholder="escreva o RA aqui" onblur="Check_RA('RA','fala_RA')">
+            <br/>
+            <p id="fala_RA"></p>
+        </form>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <span style="text-align: right;">
+        <button type="button" onclick="Cancelar()">Cancelar</button>
+        </span>
+
+
+    </body>
+</html>

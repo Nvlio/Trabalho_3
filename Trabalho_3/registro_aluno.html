@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="codigo.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script type="text/javascript" src="codigo.js"></script>
+    <title>Registro do aluno</title>
+    <style>
+      button{
+        background-color: cornflowerblue;
+        border-radius: 10px 10px 10px 10px;
+      }
+      button:hover{
+        background-color: rgb(67, 67, 251); 
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <div class="bs-component">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Efetuar Matricula</a>
+          </div>
+          <div style="text-align:right;">
+              <a class="navbar-brand" style="padding: 10px 50px 10px 10px;" href="Efetuar_matricula.html">voltar</a>
+          </div>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <form style="padding: 10px 10px 10px 10px;">
+      <div style="border: 1px solid black; padding: 10px 10px 10px 10px; border-radius: 5px 5px 5px 5px;">
+        <fieldset>
+          <legend><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formulario para matricula</font></font></legend>
+          <br>
+          <div class="form-group">
+
+            <label for="nome" class="form-label mt-4"><font  style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nome aluno</font></font></label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite o nome do aluno" onblur="verificar_nome('nome','nome_fala')">
+            <p id="nome_fala"></p>
+            
+            <br/>
+
+            <label for="serie" class="form-label mt-4"><font  style="vertical-align: inherit;"><font style="vertical-align: inherit;">Serie do aluno</font></font></label>
+            <select>
+                
+                <option>1 ano</option>
+                <option>2 ano</option>
+                <option>3 ano</option>
+                <option>4 ano</option>
+                <option>5 ano</option>
+                <option>6 ano</option>
+                <option>7 ano</option>
+                <option>8 ano</option>
+                <option>9 ano</option>
+                <option>1 ano ensino medio</option>
+                <option>2 ano ensino medio</option>
+                <option>3 ano ensino medio</option>
+
+            </select>
+            <br/>
+            
+            <label for="data" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >Data de nascimento do aluno</font></font></label><br/>
+            <input type="date" class="form-control" id="data" required="">
+            <br/>
+
+            <label for="telefone" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telefone dos responsaveis</font></font></label><br/>
+            <input type="tel" class="form-control" id="telefone" onkeypress="mascarar_tel()" placeholder="(99)99999-9999" onblur="Check('telefone')" maxlength="15">
+            <br/>
+            <label for="email" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endereço de email do responsavel</font></font></label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite o e-mail"  onblur="verificar_email('email','fala_email')" >
+            <p id="fala_email"></p>
+            <br/>
+          
+
+            <br/>
+            <label for="exampleTextarea" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alguma informação que devemos saber sobre o aluno</font></font></label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          
+          <fieldset class="form-group">
+            <legend class="mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sexo do aluno</font></font></legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="sexo" value="option1" checked=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Masculino
+              </font></font></label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="sexo2" value="option2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Feminino
+              </font></font></label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="sexo3" value="option3" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Outro
+              </font></font></label>
+            </div>
+          
+        </fieldset>
+        <br/>
+        <br/>
+        <br/>
+        <button type="button" onclick="gerar_comprovante('nome','nome_fala','telefone','email','fala_email','data')" >Enviar</button>
+        </div>
+      </form>
+    </div>
+    <br/>
+    <br/>
+    
+    
+</body>
+</html>

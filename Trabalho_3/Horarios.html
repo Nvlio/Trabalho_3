@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=“pt-br”>
+<head>
+<meta charset=“utf-8”/>
+<title>Gerar Horarios</title>
+<link rel="stylesheet" href="bootstrap.min.css"/>
+<script src="codigo.js"></script>
+<style>
+    #container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .button{
+      background-color: rgb(100, 172, 255);
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .button:hover{
+      background-color: rgb(13, 20, 151);
+      color: white;
+    }
+
+
+</style>
+</head>
+<body style="color:black;">
+    <div class="bs-component">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gerar Horarios</a>
+          </div>
+          <div style="text-align:right;">
+              <a class="navbar-brand" style="padding: 10px 50px 10px 10px;" href="sla">voltar</a>
+          </div>
+        </nav>
+    </div>
+  <br/>
+  <br/>
+  <br/>
+  
+  <h1 style="font-size:40px;"><strong>Gerar horario</strong></h1>
+    <br>
+  <form style=" padding:10px 0px 0px 10px; border: 1px solid black; border-radius: 10px 10px 10px 10px;">
+    <fieldset>
+        <legend><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prencha os dados para criar os Horarios</font></font></legend>
+          
+          <br/><br/>
+        <label for="select">Serie</label>
+        <select id="select">
+            <option value="1">1 ano</option>
+            <option value="2">2 ano</option>
+            <option value="3">3 ano</option>
+            <option value="4">4 ano</option>
+            <option value="5">5 ano</option>
+            <option value="6">6 ano</option>
+            <option value="7">7 ano</option>
+            <option value="8">8 ano</option>
+            <option value="9">9 ano</option>
+            <option value="10">1 ano ensino medio</option>
+            <option value="11">2 ano ensino medio</option>
+            <option value="12">3 ano ensino medio</option>
+        </select>
+        <br/>
+        <br/>
+        <label for="dia">Dia:</label>
+        <select id="dia">
+            <option value="1">Segunda</option>
+            <option value="2">Terça</option>
+            <option value="3">Quarta</option>
+            <option value="4">Quinta</option>
+            <option value="5">Sexta</option>
+        </select>
+        <br/>
+        <p  id="aula"></p>
+        <br/><br/>
+        <label for="professor">Professor</label>
+        <input id='professor' type="text" placeholder="Numero do professor" value="">
+        <br/><br/>
+        <p><strong id="fala"></strong></p>
+        <br/>
+        <button type="button" class="button" onclick="registra('select','dia','aula','professor')">Adicionar aula</button>
+    </fieldset>
+    <br/>
+  </form>
+  <br/><br/>
+  
+    <p>Lista com aulas<p></p>
+    <p id="titulo"></p>
+    <div id="container">
+        
+        
+        
+    </div>
+    <span style="text-align: right;">
+        <button type="button" class="button" onclick="finaliza()">Finalizar horario</button>
+    
+
+</body>
+</html>

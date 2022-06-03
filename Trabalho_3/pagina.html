@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="codigo.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script type="text/javascript" src="codigo.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!–– o bootstrap escolhido foi do site "https://bootswatch.com/" modelo Lux––>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <h1 class="navbar-brand" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadastro de alunos</font></font></h1>
+        </div>
+      </nav>
+
+      <br/><br/>
+    <form style="padding:10px 12px 10px 10px;">
+  <fieldset>
+    <legend><font style="vertical-align: inherit;"><font style="vertical-align: inherit; font-size: larger;">Informe seus dados</font></font></legend>
+    <div class="form-group">
+        <label for="nome_aluno" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align:inherit;">Seu nome completo</font></font></label>
+        <input type="text" class="form-control" id="nome_aluno" placeholder="Seu nome" onclick="apaga(this,nome_aluno)" onblur="verificar_nome()" required="">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endereço de email</font></font></label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="examplo@email.com" onclick="apaga(this,exampleInputEmail1)" onblur="verificar_email()" required="">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Senha</font></font></label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" required="">
+    </div>
+    <div class="form-group">
+        <label for="confirmInputPassword1" class="form-label mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">confirme sua senha</font></font></label>
+        <input type="password" class="form-control" id="confirmInputPassword1" onclick="apaga_senha(this,confirmInputPassword1)" onblur="valida_senha()" placeholder="Senha" required="">
+        <div id="aviso">
+          <p id="senha_diferente"></p>
+        </div>
+
+    <div class="form-group">
+      <label for="telefone" class="form-label mt-4"><font style="vertical-align:inherit;"><font style="vertical-align: inherit;">Numero de telefone</font></font></label>
+      <input type="tel" class="form-control" id="telefone" placeholder="(99)99999-9999"  onkeypress="mascarar_tel()" onblur="verificar_numero()" maxlength="15" >
+    </div>
+
+    <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Sua faixa etaria</label>
+        <select class="form-select" id="exampleSelect1">
+          <option>18-20</option>
+          <option>20-25</option>
+          <option>25-30</option>
+          <option>30></option>
+        </select>
+    </div>
+    <fieldset class="form-group">
+      <legend class="mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gostaria de receber as notificações no seu email</font></font></legend>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Sim 
+        </font></font></label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"  checked=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Não
+        </font></font></label>
+        </div>
+    </fieldset>
+    <br/>
+    
+    <button type="reset" class="btn btn-danger" style="font-size: 15px;">resetar</button>
+    <button type="submit" class="btn btn-success" style="font-size: 15px;" onclick=alert('enviado')>enviar</button>
+</form>
+<br/>
+<p style="color: gray; font-size: smaller; text-align: end;" >joao gabriel RA:9332111030</p>
+
+<p id="sla"></p>
+</body>
+</html>
+
+
+
